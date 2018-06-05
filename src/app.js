@@ -1,8 +1,15 @@
+/* libs and dependencies */
 import Vue from 'vue'
+
+/* app components and dependencies */
 import AppComponent from './components/AppComponent.vue'
+import store from './store'
 
-import '../assets/app.css'
+/* styles, fonts etc. */
+import './assets/app.scss'
 
+/* render main component and mount to the DOM */
 new Vue({
-   render: h => h(AppComponent)
- }).$mount('#app')
+    store,
+    render: h => h(AppComponent)
+}).$mount('#app')
